@@ -1,6 +1,5 @@
 import numpy as np 
 import pandas as pd 
-from scipy import fftpack
 from matplotlib import pyplot as plt 
 
 data = pd.read_csv('V000147.TXT', sep='\t', header=21) # Data reading, header cutting, line number 21 = column
