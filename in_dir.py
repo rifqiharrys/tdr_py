@@ -2,6 +2,7 @@
 
 import os
 import glob
+
 dirlist = glob.glob('*/')
 for dir in dirlist:
 	os.chdir(dir)
