@@ -7,7 +7,7 @@ def valeport_data(raw):
 	data = data.iloc[1:, 0:2] #null data @index 0 removed
 	return data
 
-#TODO: change Timestamp object type into datetime    
+#TODO: change Timestamp object type into datetime
 # data.index = pd.to_datetime(data.Timestamp, dayfirst=True)
 print(data)
 
