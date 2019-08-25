@@ -7,3 +7,5 @@ import valeport_processing as vp
 
 out = vp.valeport_sort()
 print(out)
+# output
+# data.to_csv('V000147_OUT.TXT', sep='\t')

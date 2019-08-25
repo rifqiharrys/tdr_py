@@ -25,8 +25,3 @@ def valeport_sort():
 
 
 #TODO: check if the data really sorted or already sorted after merged
-# data.index = pd.to_datetime(data.Timestamp, dayfirst=True)
-# print(data)
-
-# output
-# data.to_csv('V000147_OUT.TXT', sep='\t')
