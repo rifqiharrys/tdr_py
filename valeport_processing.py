@@ -5,21 +5,28 @@ import pandas as pd
 import glob
 from matplotlib import pyplot as plt 
 
-def valeport_data(raw):
+def valeport_raw(raw):
 	data = pd.read_table(raw, header=21, index_col='Timestamp') # Data reading, header cutting, line number 21 = column
 	data = data.iloc[1:, 0:2] #null data @index 0 removed
 	data.index = pd.to_datetime(data.index, dayfirst=True)
 	return data
 
-txtlist = glob.glob('*.[Tt][Xx][Tt]')
-dummy = []
+def valeport_merge():
+	txtlist = glob.glob('*.[Tt][Xx][Tt]')
+	dummy = []
 
-for txt in txtlist:
-	txt = valeport_data(txt)
-	dummy.append(txt)
+	for txt in txtlist:
+		txt = valeport_raw(txt)
+		dummy.append(txt)
 
-data_merged = pd.concat(dummy)
-data_sorted = data_merged.sort_index()
+	return pd.concat(dummy)
+
+def valeport_sort():
+	merged = valeport_merge()
+	return merged.sort_index()
+
+out = valeport_sort()
+print(out)
 
 #TODO: check if the data really sorted or already sorted after merged
 # data.index = pd.to_datetime(data.Timestamp, dayfirst=True)
