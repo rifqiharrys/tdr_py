@@ -2,6 +2,7 @@
 
 import os
 import glob
+import valeport_processing as vp
 
 dirlist = glob.glob('*/')
 for dir in dirlist:

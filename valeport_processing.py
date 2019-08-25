@@ -5,7 +5,7 @@ import pandas as pd
 import glob
 from matplotlib import pyplot as plt 
 
-def valeport_raw(raw):
+def valeport_input(raw):
 	data = pd.read_table(raw, header=21, index_col='Timestamp') # Data reading, header cutting, line number 21 = column
 	data = data.iloc[1:, 0:2] #null data @index 0 removed
 	data.index = pd.to_datetime(data.index, dayfirst=True)
@@ -16,7 +16,7 @@ def valeport_merge():
 	dummy = []
 
 	for txt in txtlist:
-		txt = valeport_raw(txt)
+		txt = valeport_input(txt)
 		dummy.append(txt)
 
 	return pd.concat(dummy)
