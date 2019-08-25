@@ -14,8 +14,8 @@ def valeport_merge():
 	dummy = []
 
 	for txt in txtlist:
-		txt = valeport_input(txt)
-		dummy.append(txt)
+		df = valeport_input(txt)
+		dummy.append(df)
 
 	return pd.concat(dummy)
 
