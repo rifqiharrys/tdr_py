@@ -19,8 +19,9 @@ for txt in txtlist:
 	dummy.append(txt)
 
 data_merged = pd.concat(dummy)
+data_sorted = data_merged.sort_index()
 
-#TODO: sort data by Timestamp
+#TODO: check if the data really sorted or already sorted after merged
 # data.index = pd.to_datetime(data.Timestamp, dayfirst=True)
 # print(data)
 
