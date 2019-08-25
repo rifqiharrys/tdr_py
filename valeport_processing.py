@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
-import numpy as np 
 import pandas as pd 
-import glob
-from matplotlib import pyplot as plt 
+import glob 
 
 def valeport_input(raw):
 	data = pd.read_table(raw, header=21, index_col='Timestamp') # Data reading, header cutting, line number 21 = column
@@ -25,8 +23,6 @@ def valeport_sort():
 	merged = valeport_merge()
 	return merged.sort_index()
 
-out = valeport_sort()
-print(out)
 
 #TODO: check if the data really sorted or already sorted after merged
 # data.index = pd.to_datetime(data.Timestamp, dayfirst=True)
