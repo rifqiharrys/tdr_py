@@ -7,3 +7,4 @@ Individual data reading
 - valeport_merge()
 Multiple data merging
 - valeport_sort()
+Sorting data after merging
