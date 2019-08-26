@@ -24,4 +24,4 @@ def valeport_sort():
 	return merged.sort_index()
 
 
-#TODO: check if the data really sorted or already sorted after merged
+#TODO: time adjusting, local & UTC
