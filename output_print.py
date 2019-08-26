@@ -5,7 +5,9 @@ import pandas as pd
 from matplotlib import pyplot as plt 
 import valeport_processing as vp 
 
-out = vp.valeport_sort()
-print(out)
+vmerge = vp.valeport_merge()
+vsort = vp.valeport_sort()
+
 # output
-# data.to_csv('V000147_OUT.TXT', sep='\t')
+vmerge.to_csv('MERGE.TXT', sep='\t')
+vsort.to_csv('SORT.TXT', sep='\t')
