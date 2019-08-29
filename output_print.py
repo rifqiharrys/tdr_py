@@ -5,9 +5,9 @@ import pandas as pd
 import valeport_processing as vp 
 import matplotlib.pyplot as plt
 
-vsort = vp.valeport_sort()
-x = vsort.index
-y = vsort.Depth
+vmerge = vp.v_merge()
+x = vmerge.index
+y = vmerge.Depth
 # vsort.plot(x, y)
 
 # output
