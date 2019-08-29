@@ -18,10 +18,8 @@ def v_merge(tz = 'UTC'):
 		df = v_input(txt, tz)
 		dummy.append(df)
 
-	return pd.concat(dummy)
-
-def v_sort(tz = 'UTC'):
-	merged = v_merge(tz)
+	merged = pd.concat(dummy)
+	
 	return merged.sort_index()
 
 
