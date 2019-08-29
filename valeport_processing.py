@@ -10,7 +10,7 @@ def v_input(raw, tz = 'UTC'):
 	data.index = data.index.tz_localize(tz)
 	return data
 
-def v_merge(tz = 'UTC'):
+def v_merge(tz = 'UTC', sorting = True):
 	txtlist = glob.glob('*.[Tt][Xx][Tt]')
 	dummy = []
 
@@ -18,7 +18,7 @@ def v_merge(tz = 'UTC'):
 		df = v_input(txt, tz)
 		dummy.append(df)
 
-	merged = pd.concat(dummy)
+	merged = pd.concat(dummy, sort=sorting)
 	
 	return merged.sort_index()
 
