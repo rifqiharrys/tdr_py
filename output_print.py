@@ -16,6 +16,6 @@ y = vmerge.Depth
 plt.figure(figsize=(10, 5))
 plt.plot(x, y, label='Data Pasang Surut')
 plt.xlabel('Waktu')
-plt.ylabel('Kedalaman (m)')
+plt.ylabel('Ketinggian Muka Air dari Sensor (m)')
 plt.legend(loc='best')
 plt.show()
