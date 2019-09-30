@@ -13,9 +13,9 @@ y = vmerge.Depth
 # output
 # vsort.to_csv('SORT.TXT', sep='\t')
 
-# plt.figure(figsize=(10, 5))
-plt.plot(x, y, label='Data Awal')
-# plt.xlabel('Waktu')
-# plt.ylabel('Kedalaman (m)')
-# plt.legend(loc='best')
+plt.figure(figsize=(10, 5))
+plt.plot(x, y, label='Data Pasang Surut')
+plt.xlabel('Waktu')
+plt.ylabel('Ketinggian Muka Air dari Sensor (m)')
+plt.legend(loc='best')
 plt.show()
