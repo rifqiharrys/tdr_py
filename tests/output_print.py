@@ -2,10 +2,10 @@
 
 import numpy as np
 import pandas as pd 
-import valeport_processing as vp 
+from tdr_py import vp_tide as vt
 import matplotlib.pyplot as plt
 
-vmerge = vp.v_merge()
+vmerge = vt.v_merge()
 x = vmerge.index
 y = vmerge.Depth
 # vsort.plot(x, y)

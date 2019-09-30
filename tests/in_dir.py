@@ -2,13 +2,13 @@
 
 import os
 import glob
-import valeport_processing as vp
+from tdr_py import vp_tide as vt
 
 dirlist = glob.glob('*/')
 for dir in dirlist:
 	os.chdir(dir)
 
-	merge = vp.v_merge('Asia/Jayapura')
+	merge = vt.v_merge('Asia/Jayapura')
 	merge.to_csv('MERGE.TXT', sep='\t')
 
 	os.chdir('..')
