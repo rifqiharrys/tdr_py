@@ -2,6 +2,7 @@
 
 import pandas as pd 
 import glob 
+import os
 
 #! NOTE 
 #? Indonesia timezone (tz):
@@ -26,7 +27,7 @@ def v_input(raw, tz = 'UTC'):
 
 	return data
 
-def v_merge(tz = 'UTC', sorting = True):
+def v_merge(tz = 'UTC'):
 	# .txt file list
 	txtlist = glob.glob('*.[Tt][Xx][Tt]')
 
@@ -39,7 +40,23 @@ def v_merge(tz = 'UTC', sorting = True):
 		dummy.append(df)
 
 	# Merge list of data into one unsorted dataframe
-	merged = pd.concat(dummy, sort=sorting)
+	merged = pd.concat(dummy, sort = True)
 	
 	# Sorted dataframe by index (i.e. Timestamp) as output
 	return merged.sort_index()
+
+def v_dirmerge(tz = 'UTC'):
+	dirlist = glob.glob('*/')
+	dummy = []
+
+	for dir in dirlist:
+		os.chdir(dir)
+		df = v_merge(tz)
+		dummy.append(df)
+		os.chdir('..')
+	
+	merged = pd.concat(dummy, sort = True)
+
+	return merged.sort_index()
+
+# TODO: Make general function to merge data from multi level directories
