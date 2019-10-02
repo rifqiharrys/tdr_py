@@ -11,8 +11,9 @@ vmerge = vt.v_dirmerge('Asia/Jakarta')
 x = vmerge.index
 y = vmerge.Depth
 print(vmerge)
-# vsort.plot(x, y)
 print(vmerge.dtypes)
+# vmerge.to_csv('MERGE.TXT', sep = '\t')
+# vsort.plot(x, y)
 # output
 # vsort.to_csv('SORT.TXT', sep='\t')
 
