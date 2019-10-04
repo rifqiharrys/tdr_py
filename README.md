@@ -1,7 +1,7 @@
 # tdr_py
 Tide Data Reform using python 3
 
-valeport_processing.py is a module to process data acquired from Valeport depth recording instruments. It contains 3 functions:
+vp_tide.py is a module to process depth data acquired from Valeport depth recording instruments. It contains 3 functions:
 -   v_input(raw, tz = 'UTC')
     Individual data reading
 -   v_merge(tz = 'UTC')
