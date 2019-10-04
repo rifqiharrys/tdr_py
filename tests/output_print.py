@@ -17,7 +17,7 @@ print(vmerge.dtypes)
 # output
 # vsort.to_csv('SORT.TXT', sep='\t')
 
-plt.figure(figsize=(10, 5))
+plt.figure(figsize=(20, 10))
 plt.plot(x, y, label='Data Pasang Surut')
 plt.xlabel('Waktu')
 plt.ylabel('Ketinggian Muka Air dari Sensor (m)')
